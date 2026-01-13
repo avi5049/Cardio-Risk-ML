@@ -79,8 +79,8 @@ export default function AssessmentPage() {
         age_group: getAgeGroup(),
       };
 
-      // Call Flask API (Uses relative URL for Vercel compatibility)
-      const response = await fetch("/api/predict", {
+      // Call Flask API 
+      const response = await fetch("https://cardio-risk-ml.onrender.com/api/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
